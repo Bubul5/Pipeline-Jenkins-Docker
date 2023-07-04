@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: jenkins-docker-app
+spec:
+  selector:
+    matchLabels:
+      app: jenkins-docker-app
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: jenkins-docker-app
+    spec:
+      containers:
+        - name: jenkins-docker-app
+          image: jenkins-docker-app:0.1 #docker image name, repository = jenkins-docker-app , TAG = 0.1
+          # Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+# The port that the container is running on in the cluster
