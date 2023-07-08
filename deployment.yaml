@@ -13,10 +13,10 @@ spec:
         app: jenkins-docker-app
     spec:
       containers:
-        - name: jenkins-docker-app
-          image: jenkins-docker-app:0.1 #docker image name, repository = jenkins-docker-app , TAG = 0.1
+        - name: jenkins-docker-app #container name would be - pod name starts with
+          image: jenkins-docker-app:0.3 #docker image name, repository = jenkins-docker-app , TAG = 0.1
           # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8081
 # The port that the container is running on in the cluster
