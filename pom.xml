@@ -8,11 +8,11 @@
 		<version>2.7.13</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>springboot-jenkins-docker-app</groupId>
+	<groupId>jenkins-docker-app</groupId>
 	<artifactId>jenkins-docker-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jenkins-docker-app</name>
-	<description>Spring Boot Jenkins</description>
+	<name>Pipeline-Jenkins-Docker</name>
+	<description>Jenkins Docker based Pipeline</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
